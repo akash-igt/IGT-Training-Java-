@@ -3135,3 +3135,6 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.jdt.launching 4 107 2025-01-29 13:22:50.139
 !MESSAGE Launch configuration New_configuration references non-existing project DemoProject.
+
+!ENTRY org.eclipse.jdt.launching 4 107 2025-01-29 14:47:32.629
+!MESSAGE Launch configuration New_configuration references non-existing project DemoProject.
