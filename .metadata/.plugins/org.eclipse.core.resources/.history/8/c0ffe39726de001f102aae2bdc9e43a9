@@ -1,0 +1,29 @@
+
+class Car
+{
+	int speed = 2000;
+	String model = "2025";
+	int price = 100000;
+	void gear()
+	{
+		System.out.println("5-Gear");
+	}
+}
+//class BMW extends Car
+//{
+//	void gear()
+//	{
+//		System.out.println("No Gears");
+//	}
+//}
+
+public class Demo9 {
+	public static void main(String[] args) {
+		Car c=new Car();
+		c.speed=3000;
+		System.out.println(c.speed);
+		System.out.println(c.model);
+		System.out.println(c.price);
+		
+	}
+}

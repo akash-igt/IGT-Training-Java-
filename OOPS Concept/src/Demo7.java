@@ -7,6 +7,7 @@ class Bank
 	public void roi()
 	{
 		System.out.println("10%");
+		
 	}
 }
 class SBI extends Bank
