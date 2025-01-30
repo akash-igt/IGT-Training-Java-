@@ -1,0 +1,17 @@
+class Emp2
+{
+		private int id;
+		private String name;
+		
+		
+			
+		
+	
+}
+public class Demo12 {
+	public static void main(String[] args) {
+		Emp e = new Emp();
+		e.getId()
+	}
+
+}
