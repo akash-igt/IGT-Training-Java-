@@ -1,110 +1,130 @@
-import java.io.*;
+
+import java.io.IOException;
 import java.sql.*;
+ 
 class AA
 {
-    void display() throws IOException,SQLException,ABCException
-    {
-        for(int i=0;i<=20;i++)
-        {
-            System.out.println("I :"+i);
-            if(i==18) throw new NullPointerException();
-            if(i==16) throw new ArrayIndexOutOfBoundsException();
-            if(i==14) throw new IOException();
-            if(i==13) throw new ArithmeticException();
-            if(i==11) throw new SQLException();
-            if(i==10) throw new ABCException("ABC Exception ");
- 
-        }
-    }
+		void display() throws IOException, SQLException, ABCException,NullPointerException,ArrayIndexOutOfBoundsException
+		{
+			for(int i=0;i<=20;i++)
+			{
+				System.out.println("I :"+i);
+				if(i==18) throw new NullPointerException();
+				if(i==16) throw new ArrayIndexOutOfBoundsException();
+				if(i==14) throw new IOException();
+				if(i==11) throw new SQLException();
+				if(i==13) throw new ArithmeticException();
+				if(i==10) throw new ABCException("Abc Excpetrion ");
+			}
+		}
 }
-class Demo5
-{
-    public static void main(String args[])
-    {
-        try
-        {
-            AA a= new AA();
-            a.display();
-            try
-            {  
-            }
-            catch(Exception e)
-            {
-            }
- 
-            try
-            {  
-            }
-            catch(Exception e)
-            {
-            }
-            finally
-            {
-            }
- 
- 
- 
-            try
-            {  
-            }
-            finally
-            {
-            }
- 
- 
-           
- 
-        }
-        catch(NullPointerException np)
-        {
-            System.out.println("Nullpointer raised ");
-            try
-            {  
-            }
-            catch(Exception e)
-            {
-            }
-        }
-        catch(ArrayIndexOutOfBoundsException ai)
-        {
-                System.out.println("ArrayIndexOutOfBoundsException raised ");
-        }
-        catch(IOException io)
-        {
-            System.out.println("Io Exception  raised ");
-        }
-        catch(ArithmeticException ae)
-        {
-            System.out.println(" ArithmeticException  raised ");
- 
-        }
-        catch(SQLException sq)
-        {
-            System.out.println(" SQLException  raised ");
- 
-        }
-        catch(ABCException abc)
-        {
-            System.out.println(abc.getMessage());
-        }
-        finally
-        {
-            System.out.println("Thank yuou ");
-            try
-            {  
-            }
-            catch(Exception e)
-            {
-            }
- 
-        }
-    }
+public class Demo5 {
+	public static void main(String[] args) {
+		
+		try
+		{
+			AA a = new AA();a.display();
+			try
+			{	
+			}
+			catch(Exception e)
+			{
+			}
+			
+			try
+			{	
+			}
+			catch(Exception e)
+			{
+			}
+			finally
+			{
+			}
+			
+			try
+			{	
+			}
+			finally
+			{
+			}
+		}
+		catch (NullPointerException np) {
+			try
+			{	
+			}
+			catch(Exception e)
+			{
+			}
+			
+			try
+			{	
+			}
+			catch(Exception e)
+			{
+			}
+			finally
+			{
+			}
+			
+			try
+			{	
+			}
+			finally
+			{
+			}
+			System.out.println("NullPointerException raisesd ");
+		}
+		catch (ArithmeticException np) {
+			System.out.println("ArithmeticException raisesd ");
+		}
+		catch (ArrayIndexOutOfBoundsException  anp) {
+			System.out.println("ArrayIndexOutOfBoundsException raisesd ");
+		}
+		catch (IOException  io) {
+			System.out.println("IOException raisesd ");
+		}
+		catch (ABCException  aio) {
+			System.out.println("ABCException raisesd ");
+		}
+		catch (SQLException  isql) {
+			System.out.println("SQLException raisesd ");
+		}
+		catch (Exception e) {
+			System.out.println(e);
+		}
+		finally {
+			try
+			{	
+			}
+			catch(Exception e)
+			{
+			}
+			
+			try
+			{	
+			}
+			catch(Exception e)
+			{
+			}
+			finally
+			{
+			}
+			try
+			{	
+			}
+			finally
+			{
+			}
+			
+			System.out.println("Thank you ");
+		}
+	}
 }
 class ABCException extends Exception
 {
-    ABCException(String msg)
-    {
-        super(msg);
-    }
+	ABCException(String msg)
+	{
+		super(msg);
+	}
  
 }
